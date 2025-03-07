@@ -1,17 +1,63 @@
-def mostrar_menu():
-    print("\nCALCULADORA DE POLINOMIOS")
-    print("1 Introducir polinomios manualmente")
-    print("2 Realizar operaciones con los polinomios")
-    print("3 Salir")
+def dicc_polinomio(polinomio_str):
 
+    polinomio = {}
+    polinomio_str = polinomio_str.replace(" ", "")  # Quitamos espacios
 
-def ingresar_polinomio():
-    polinomio = input("Introduce el polinomio (Ejemplo: 2x^4 + x - 2): ")
+    # Separar los términos por los signos + y - manteniendo los signos
+    terminos = []
+    temp = ""
+    for char in polinomio_str:
+        if char in "+-" and temp:
+            terminos.append(temp)  # Guardamos el término anterior
+            temp = char  # Nuevo término empieza con el signo
+        else:
+            temp += char
+    terminos.append(temp)  # Último término
+
+    # Procesar cada término
+    for termino in terminos:
+        if "x" in termino:  # Términos con x
+            coeficiente, _, grado = termino.partition("x^")  # Separar coef y grado
+
+            if grado == "":
+                if "x" in coeficiente:
+                    coeficiente, _, _ = coeficiente.partition("x")
+                    grado = 1
+                else:
+                    grado = 1
+            else:
+                grado = int(grado)  # Convertimos grado a número
+
+            if coeficiente in ["", "+"]:  # "+x" es 1x
+                coeficiente = 1
+            elif coeficiente == "-":  # "-x" es -1x
+                coeficiente = -1
+            else:
+                coeficiente = int(coeficiente)  # Convertimos coeficiente a número
+
+        else:  # Si es solo un número, es un término independiente (grado 0)
+            coeficiente = int(termino)
+            grado = 0
+
+        polinomio[grado] = polinomio.get(grado, 0) + coeficiente  # Sumar coef en caso de repetidos
+
     return polinomio
 
 
+def mostrar_menu():
+    print("\n📌 CALCULADORA DE POLINOMIOS")
+    print("1️⃣ Introducir polinomios manualmente")
+    print("2️⃣ Realizar operaciones con los polinomios")
+    print("3️⃣ Salir")
+
+
+def ingresar_polinomio():
+    polinomio_str = input("\n Introduce el polinomio (Ejemplo: 2x^4 + x - 2): ")
+    return dicc_polinomio(polinomio_str)  # Convertimos a diccionario aquí mismo
+
+
 def main():
-    polinomios = []  # Lista para almacenar los polinomios ingresados
+    polinomios = []  # Guardará los polinomios como diccionarios
 
     while True:
         mostrar_menu()
@@ -24,25 +70,25 @@ def main():
 
         elif opcion == "2":
             if len(polinomios) < 2:
-                print("❌ Debes introducir al menos dos polinomios para operar.")
+                print("❌ Debes introducir al menos dos polinomios para poder operar.")
             else:
-                print("Escoge una operación:")
-                print("1 Suma")
-                print("2 Resta")
-                print("3 Multiplicación")
-                print("4 División")
-                print("5 Evaluación")
+                print("\n🔹 Escoge una operación:")
+                print("1️⃣ Suma")
+                print("2️⃣ Resta")
+                print("3️⃣ Multiplicación")
+                print("4️⃣ División")
+                print("5️⃣ Evaluación")
 
                 operacion = input("Selecciona la operación: ")
                 # Aquí llamarán a las funciones específicas en cada rama
-                print("Función de operación pendiente de implementación.")
+                print("⚙️ Función de operación pendiente de implementación.")
 
         elif opcion == "3":
-            print("Saliendo de la calculadora. ¡Adioooós!")
+            print("👋 Saliendo de la calculadora. ¡Adioooós!")
             break
 
         else:
-            print("Opción no válida. Inténtalo de nuevo.")
+            print("⚠️ Opción no válida. Inténtalo de nuevo.")
 
 
 if __name__ == "__main__":
