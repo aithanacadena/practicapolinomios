@@ -68,6 +68,8 @@ def main():
             polinomios.append(polinomio)
             print(f"✅ Polinomio guardado: {polinomio}")
 
+        from operaciones import suma_polinomios  # Importamos la función de suma
+
         elif opcion == "2":
             if len(polinomios) < 2:
                 print("❌ Debes introducir al menos dos polinomios para poder operar.")
@@ -81,7 +83,9 @@ def main():
 
                 operacion = input("Selecciona la operación: ")
                 # Aquí llamarán a las funciones específicas en cada rama
-                print("⚙️ Función de operación pendiente de implementación.")
+                if operacion == "1":  # SUMA
+                    resultado = suma_polinomios(polinomios[0], polinomios[1])
+                    print(f"✅ Resultado de la suma: {resultado}")
 
         elif opcion == "3":
             print("👋 Saliendo de la calculadora. ¡Adioooós!")
