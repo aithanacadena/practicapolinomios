@@ -69,7 +69,7 @@ def main():
             print(f"✅ Polinomio guardado: {polinomio}")
 
         from operaciones import suma_polinomios  # Importamos la función de suma
-        from operaciones import suma_polinomios, restar_polinomios # Importamos la de la resta
+        from operaciones import restar_polinomios # Importamos la de la resta
 
         elif opcion == "2":
             if len(polinomios) < 2:
