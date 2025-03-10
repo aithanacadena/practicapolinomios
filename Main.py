@@ -69,6 +69,7 @@ def main():
             print(f"✅ Polinomio guardado: {polinomio}")
 
         from operaciones import suma_polinomios  # Importamos la función de suma
+        from operaciones import suma_polinomios, restar_polinomios # Importamos la de la resta
 
         elif opcion == "2":
             if len(polinomios) < 2:
@@ -86,6 +87,10 @@ def main():
                 if operacion == "1":  # SUMA
                     resultado = suma_polinomios(polinomios[0], polinomios[1])
                     print(f"✅ Resultado de la suma: {resultado}")
+
+                elif operacion == "2":  # RESTA
+                    resultado = restar_polinomios(polinomios[0], polinomios[1])
+                    print(f"✅ Resultado de la resta: {resultado}")
 
         elif opcion == "3":
             print("👋 Saliendo de la calculadora. ¡Adioooós!")
