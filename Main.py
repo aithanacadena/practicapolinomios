@@ -70,6 +70,7 @@ def main():
 
         from operaciones import suma_polinomios  # Importamos la función de suma
         from operaciones import restar_polinomios # Importamos la de la resta
+        from operaciones import multiplicar_polinomios #Importamos la función que multiplicación
 
         elif opcion == "2":
             if len(polinomios) < 2:
@@ -91,6 +92,10 @@ def main():
                 elif operacion == "2":  # RESTA
                     resultado = restar_polinomios(polinomios[0], polinomios[1])
                     print(f"✅ Resultado de la resta: {resultado}")
+
+                elif operacion == "3":  # MULTIPLICACIÓN
+                    resultado = multiplicar_polinomios(polinomios[0], polinomios[1])
+                    print(f"✅ Resultado de la multiplicación: {resultado}")
 
         elif opcion == "3":
             print("👋 Saliendo de la calculadora. ¡Adioooós!")
