@@ -1,3 +1,7 @@
+from funciones.operaciones import suma_polinomios  # Importamos la función de suma
+from funciones.operaciones import restar_polinomios # Importamos la de la resta
+from funciones.operaciones import multiplicar_polinomios #Importamos la función que multiplicación
+
 def dicc_polinomio(polinomio_str):
 
     polinomio = {}
@@ -46,9 +50,9 @@ def dicc_polinomio(polinomio_str):
 
 def mostrar_menu():
     print("\n📌 CALCULADORA DE POLINOMIOS")
-    print("1️⃣ Introducir polinomios manualmente")
-    print("2️⃣ Realizar operaciones con los polinomios")
-    print("3️⃣ Salir")
+    print("1 Introducir polinomios manualmente")
+    print("2 Realizar operaciones con los polinomios")
+    print("3 Salir")
 
 
 def ingresar_polinomio():
@@ -68,20 +72,16 @@ def main():
             polinomios.append(polinomio)
             print(f"✅ Polinomio guardado: {polinomio}")
 
-        from operaciones import suma_polinomios  # Importamos la función de suma
-        from operaciones import restar_polinomios # Importamos la de la resta
-        from operaciones import multiplicar_polinomios #Importamos la función que multiplicación
-
         elif opcion == "2":
             if len(polinomios) < 2:
                 print("❌ Debes introducir al menos dos polinomios para poder operar.")
             else:
                 print("\n🔹 Escoge una operación:")
-                print("1️⃣ Suma")
-                print("2️⃣ Resta")
-                print("3️⃣ Multiplicación")
-                print("4️⃣ División")
-                print("5️⃣ Evaluación")
+                print("1 Suma")
+                print("2 Resta")
+                print("3 Multiplicación")
+                print("4 División")
+                print("5 Evaluación")
 
                 operacion = input("Selecciona la operación: ")
                 # Aquí llamarán a las funciones específicas en cada rama
