@@ -1,7 +1,8 @@
 from funciones.operaciones import suma_polinomios  # Importamos la función de suma
 from funciones.operaciones import restar_polinomios # Importamos la de la resta
-from funciones.operaciones import multiplicar_polinomios #Importamos la función que multiplicación
-from funciones.operaciones import dividir_polinomios
+from funciones.operaciones import multiplicar_polinomios #Importamos la función que multiplica
+from funciones.operaciones import dividir_polinomios # Importamos la función de división
+from funciones.operaciones import evaluar_polinomio #Importamos la función de la evaluación
 
 def dicc_polinomio(polinomio_str):
 
@@ -101,6 +102,11 @@ def main():
                 elif operacion == "4":  # DIVISIÓN
                     resultado = dividir_polinomios(polinomios[0], polinomios[1])
                     print(f"✅ Resultado de la división: {resultado}")
+
+                elif operacion == "5":  # EVALUACIÓN
+                    x = float(input("🔹 Introduce el valor de x: "))
+                    resultado = evaluar_polinomio(polinomios[0], x)
+                    print(f"✅ Resultado de la evaluación: {resultado}")
 
         elif opcion == "3":
             print("👋 Saliendo de la calculadora. ¡Adioooós!")
