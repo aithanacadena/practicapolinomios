@@ -1,6 +1,7 @@
 from funciones.operaciones import suma_polinomios  # Importamos la función de suma
 from funciones.operaciones import restar_polinomios # Importamos la de la resta
 from funciones.operaciones import multiplicar_polinomios #Importamos la función que multiplicación
+from funciones.operaciones import dividir_polinomios
 
 def dicc_polinomio(polinomio_str):
 
@@ -96,6 +97,10 @@ def main():
                 elif operacion == "3":  # MULTIPLICACIÓN
                     resultado = multiplicar_polinomios(polinomios[0], polinomios[1])
                     print(f"✅ Resultado de la multiplicación: {resultado}")
+
+                elif operacion == "4":  # DIVISIÓN
+                    resultado = dividir_polinomios(polinomios[0], polinomios[1])
+                    print(f"✅ Resultado de la división: {resultado}")
 
         elif opcion == "3":
             print("👋 Saliendo de la calculadora. ¡Adioooós!")
