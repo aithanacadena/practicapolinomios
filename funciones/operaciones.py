@@ -36,12 +36,7 @@ def multiplicar_polinomios(p1, p2):
 
 # DIVISIÓN
 def dividir_polinomios(dividendo, divisor):
-    """
-    Realiza la división de dos polinomios representados como diccionarios.
-    :param dividendo: Diccionario del polinomio dividendo {grado: coeficiente}
-    :param divisor: Diccionario del polinomio divisor {grado: coeficiente}
-    :return: (cociente, residuo) -> Ambos como diccionarios de polinomios
-    """
+
     if not divisor:
         raise ValueError("El divisor no puede ser un polinomio vacío.")
 
