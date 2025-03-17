@@ -81,3 +81,8 @@ def dividir_polinomios(dividendo, divisor):
 
     return (cociente, resto)
 
+## EVALUCIACIÓN
+def evaluar_polinomio(polinomio, x):
+    resultado = sum(coef * (x ** grado) for grado, coef in polinomio.items())
+    return resultado
+
