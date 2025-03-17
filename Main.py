@@ -1,8 +1,8 @@
 from funciones.operaciones import suma_polinomios  # Importamos la función de suma
 from funciones.operaciones import restar_polinomios # Importamos la de la resta
-from funciones.operaciones import multiplicar_polinomios #Importamos la función que multiplica
+from funciones.operaciones import multiplicar_polinomios # Importamos la función que multiplica
 from funciones.operaciones import dividir_polinomios # Importamos la función de división
-from funciones.operaciones import evaluar_polinomio #Importamos la función de la evaluación
+from funciones.operaciones import evaluar_polinomio # Importamos la función de la evaluación
 
 def dicc_polinomio(polinomio_str):
 
