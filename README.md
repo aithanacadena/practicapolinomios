@@ -30,7 +30,7 @@ Este proyecto no necesita librerias externas, solo necesitas Python instalado en
 
 ### **Cómo instalarlo:**
 
-Clonar el repositprio
+Clonar el repositório
 git clone  https://github.com/aithanacadena/practicapolinomios
 
 ### **Uso de la calculadora:** 
@@ -44,28 +44,34 @@ Ejemplo de uso:
 
 ##### Al seleccionar la opción 1:
 
-Te aparecera en pantalla un menú con 5 opciones
+Aparecerá en pantalla un menú con 5 opciones
 1. Suma
 2. Resta
 3. Multiplicación 
 4. División
 5. Evaluación
 
-Si la opción 1,2,3 o 4 es seleccionada, la calculadora pedira que ingreses
-dos polinomios que seran con los que se realice ya sea la operación de
+Si la opción 1,2,3 o 4 es seleccionada, la calculadora pedirá que ingreses
+dos polinomios que serán con los que se realice ya sea la operación de
 suma, resta, multiplicación o división según la opción elegida en el menú
 anterior.  
 
-Si la opción elegida es la 5, que correspondría a la opción de evaluación,
-se pedirá introducir un polinomio y un valor de x que sera el que se evaluará
+Si la opción elegida es la 5, que correspondería a la opción de evaluación,
+se pedirá introducir un polinomio y un valor de x que será el que se evaluará
 en el polinomio introducido. 
 
 Para introducir los polinomios aparecerá un ejemplo del formato en que se deben introducir.
 
-Al seleccinar la opción 2: 
+##### Al seleccionar la opción 2: 
 
-Se pide que ingreses el nombre del  fichero donde esten incluidos tus polinomios , por 
+Se pide que ingreses el nombre del  fichero donde estén incluidos tus polinomios , por 
 ejemplo polinomios.txt. La calculadora leerá tanto los polinomios que estén en el fichero como 
+los valores de "x" para la evaluación. 
+
+Tras esto, aparecerá el menú de operaciones, donde seleccionaras la opción con la operación deseada para hacer
+con tus polinomios ingresados en el fichero. 
+
+
 
 
 
