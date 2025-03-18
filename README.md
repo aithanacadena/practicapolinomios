@@ -64,4 +64,3 @@ en el polinomio introducido.
 Al seleccinar la opción 2
 
 
-
