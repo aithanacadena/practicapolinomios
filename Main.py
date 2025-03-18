@@ -51,10 +51,11 @@ def dicc_polinomio(polinomio_str):
 
 
 def mostrar_menu():
-    print("\n📌 CALCULADORA DE POLINOMIOS")
-    print("1 Introducir polinomios manualmente")
-    print("2 Realizar operaciones con los polinomios")
-    print("3 Salir")
+    print("\n CALCULADORA DE POLINOMIOS")
+    print("1. Introducir polinomios manualmente")#
+    print("2. Realizar operaciones con los polinomios por pantalla")
+    print("3. Leer fichero de operaciones")
+    print("4. Salir")
 
 
 def ingresar_polinomio():
@@ -72,48 +73,48 @@ def main():
         if opcion == "1":
             polinomio = ingresar_polinomio()
             polinomios.append(polinomio)
-            print(f"✅ Polinomio guardado: {polinomio}")
+            print(f" Polinomio guardado: {polinomio}")
 
         elif opcion == "2":
             if len(polinomios) < 2:
-                print("❌ Debes introducir al menos dos polinomios para poder operar.")
+                print(" Debes introducir al menos dos polinomios para poder operar.")
             else:
-                print("\n🔹 Escoge una operación:")
-                print("1 Suma")
-                print("2 Resta")
-                print("3 Multiplicación")
-                print("4 División")
-                print("5 Evaluación")
+                print("\n Escoge una operación:")
+                print("1. Suma")
+                print("2. Resta")
+                print("3. Multiplicación")
+                print("4. División")
+                print("5. Evaluación")
 
                 operacion = input("Selecciona la operación: ")
                 # Aquí llamarán a las funciones específicas en cada rama
                 if operacion == "1":  # SUMA
                     resultado = suma_polinomios(polinomios[0], polinomios[1])
-                    print(f"✅ Resultado de la suma: {resultado}")
+                    print(f" Resultado de la suma: {resultado}")
 
                 elif operacion == "2":  # RESTA
                     resultado = restar_polinomios(polinomios[0], polinomios[1])
-                    print(f"✅ Resultado de la resta: {resultado}")
+                    print(f" Resultado de la resta: {resultado}")
 
                 elif operacion == "3":  # MULTIPLICACIÓN
                     resultado = multiplicar_polinomios(polinomios[0], polinomios[1])
-                    print(f"✅ Resultado de la multiplicación: {resultado}")
+                    print(f" Resultado de la multiplicación: {resultado}")
 
                 elif operacion == "4":  # DIVISIÓN
                     resultado = dividir_polinomios(polinomios[0], polinomios[1])
-                    print(f"✅ Resultado de la división: {resultado}")
+                    print(f" Resultado de la división: {resultado}")
 
                 elif operacion == "5":  # EVALUACIÓN
-                    x = float(input("🔹 Introduce el valor de x: "))
+                    x = float(input(" Introduce el valor de x: "))
                     resultado = evaluar_polinomio(polinomios[0], x)
-                    print(f"✅ Resultado de la evaluación: {resultado}")
+                    print(f" Resultado de la evaluación: {resultado}")
 
         elif opcion == "3":
-            print("👋 Saliendo de la calculadora. ¡Adioooós!")
+            print("Apagando calculadora...")
             break
 
         else:
-            print("⚠️ Opción no válida. Inténtalo de nuevo.")
+            print(" Opción no válida. Inténtalo de nuevo.")
 
 
 if __name__ == "__main__":
