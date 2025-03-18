@@ -6,7 +6,7 @@
 Este proyecto es una calculadora de polinomios en Python que permite
 realizar diversas operaciones matemáticas con polinomios. 
 
-### **Carcterísticas:**
+### **Funciones de la calculadora:**
 
 1. Suma de polinomios 
 2. Resta de polinomios 
@@ -30,14 +30,24 @@ Este proyecto no necesita librerias externas, solo necesitas Python instalado en
 
 ### **Cómo instalarlo:**
 
-Clonar el repositprio (o descargarlo como ZIP)
+Clonar el repositprio
 git clone  https://github.com/aithanacadena/practicapolinomios
-cd calculadora-polinomios
 
 ### **Uso de la calculadora:** 
 
 Cuando ejecutas el programa, verás un menú con varias opciones.
 
 Ejemplo de uso:
-1. Introducir polinomios
+1. Realizar operaciones con los polinomios
+2. Leer fichero con operaciones
+3. Salir
+
+Al seleccionar la opción 1:
+Te aparecera en pantalla un menú con 5 opciones
+1. Suma
+2. Resta
+3. Multiplicación 
+4. División
+5. 
+
 
