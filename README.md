@@ -92,6 +92,7 @@ posible que la calculadora devuelva un resultado como {2: 6, 4: 1, 0: 9, 1: 1} p
 ### Autores:
 
 Pablo Blanco-Traba Villar
+
 Aithana Cadena Ospitia 
 
 
