@@ -1,4 +1,4 @@
-from Main import dicc_polinomio
+from funciones.diccionarios import dicc_polinomio
 
 def leer_ficheros(nombre_archivo):
     polinomios = []
