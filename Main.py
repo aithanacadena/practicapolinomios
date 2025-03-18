@@ -12,11 +12,9 @@ def mostrar_menu():
     print("2. Leer fichero de operaciones")
     print("3. Salir")
 
-
 def ingresar_polinomio():
     polinomio_str = input("\n Introduce el polinomio (Ejemplo: 2x^4 + x - 2): ")
     return dicc_polinomio(polinomio_str)
-
 
 def main():
     while True:
@@ -78,53 +76,40 @@ def main():
             else:
 
                 print(f" Polinomios cargados desde archivo: {polinomios} y valor de x: {valor_x}")
-
                 print("\n Escoge una operación:")
-
                 print("1. Suma")
-
                 print("2. Resta")
-
                 print("3. Multiplicación")
-
                 print("4. División")
-
                 print("5. Evaluación")
 
                 operacion = input("Selecciona la operación: ")
 
                 if operacion in ["1", "2", "3", "4"] and len(polinomios) < 2:
-
                     print(" Se necesitan al menos dos polinomios para operar.")
 
                 elif operacion == "5" and valor_x is None:
-
                     print(" No se encontró un valor de x en el archivo.")
 
                 else:
 
                     if operacion == "1":
-
                         resultado = suma_polinomios(polinomios[0], polinomios[1])
                         print(f" Resultado de la suma: {resultado}")
 
                     elif operacion == "2":
-
                         resultado = restar_polinomios(polinomios[0], polinomios[1])
                         print(f" Resultado de la resta: {resultado}")
 
                     elif operacion == "3":
-
                         resultado = multiplicar_polinomios(polinomios[0], polinomios[1])
                         print(f" Resultado de la multiplicación: {resultado}")
 
                     elif operacion == "4":
-
                         resultado = dividir_polinomios(polinomios[0], polinomios[1])
                         print(f" Resultado de la división: {resultado}")
 
                     elif operacion == "5":
-
                         resultado = evaluar_polinomio(polinomios[0], valor_x)
                         print(f" Resultado de la evaluación: {resultado}")
 
