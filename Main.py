@@ -4,7 +4,7 @@ from funciones.operaciones import multiplicar_polinomios #Importamos la función
 from funciones.operaciones import dividir_polinomios #Importamos la función de división desde operaciones
 from funciones.operaciones import evaluar_polinomio #Importamos la función de evaluación desde operaciones
 from funciones.lectura_ficheros import leer_ficheros #Importamos la función de lectura de ficheros
-from funciones.diccionarios import dicc_polinomio
+from funciones.diccionarios import dicc_polinomio #Importamos la función de diccionarios
 
 def mostrar_menu():
     print("\n CALCULADORA DE POLINOMIOS")
