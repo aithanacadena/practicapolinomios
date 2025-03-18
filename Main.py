@@ -4,49 +4,7 @@ from funciones.operaciones import multiplicar_polinomios #Importamos la función
 from funciones.operaciones import dividir_polinomios #Importamos la función de división desde operaciones
 from funciones.operaciones import evaluar_polinomio #Importamos la función de evaluación desde operaciones
 from funciones.lectura_ficheros import leer_ficheros #Importamos la función de lectura de ficheros
-
-def dicc_polinomio(polinomio_str):
-    polinomio = {}
-    polinomio_str = polinomio_str.replace(" ", "")
-
-    terminos = []
-    temp = ""
-    for char in polinomio_str:
-        if char in "+-" and temp:
-            terminos.append(temp)
-            temp = char
-        else:
-            temp += char
-    terminos.append(temp)
-
-    for termino in terminos:
-        if "x" in termino:
-            coeficiente, _, grado = termino.partition("x^")
-
-            if grado == "":
-                if "x" in coeficiente:
-                    coeficiente, _, _ = coeficiente.partition("x")
-                    grado = 1
-                else:
-                    grado = 1
-            else:
-                grado = int(grado)
-
-            if coeficiente in ["", "+"]:
-                coeficiente = 1
-            elif coeficiente == "-":
-                coeficiente = -1
-            else:
-                coeficiente = int(coeficiente)
-
-        else:
-            coeficiente = int(termino)
-            grado = 0
-
-        polinomio[grado] = polinomio.get(grado, 0) + coeficiente
-
-    return polinomio
-
+from funciones.diccionarios import dicc_polinomio #Importamos la función de diccionarios
 
 def mostrar_menu():
     print("\n CALCULADORA DE POLINOMIOS")
