@@ -1,6 +1,6 @@
 from Main import dicc_polinomio
 
-def leer_polinomios_desde_archivo(nombre_archivo):
+def leer_ficheros(nombre_archivo):
     polinomios = []
     valor_x = None  # Para la evaluación
 
