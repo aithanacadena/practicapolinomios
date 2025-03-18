@@ -72,7 +72,7 @@ def main():
             print("4. División")
             print("5. Evaluación")
 
-            operacion = input("⚡ Selecciona la operación: ")
+            operacion = input(" Selecciona la operación: ")
 
             if operacion in ["1", "2", "3", "4"]:
                 print("\n Introduce los dos polinomios para operar:")
@@ -81,29 +81,29 @@ def main():
 
                 if operacion == "1":
                     resultado = suma_polinomios(polinomio1, polinomio2)
-                    print(f"✅ Resultado de la suma: {resultado}")
+                    print(f" Resultado de la suma: {resultado}")
 
                 elif operacion == "2":
                     resultado = restar_polinomios(polinomio1, polinomio2)
-                    print(f"✅ Resultado de la resta: {resultado}")
+                    print(f" Resultado de la resta: {resultado}")
 
                 elif operacion == "3":
                     resultado = multiplicar_polinomios(polinomio1, polinomio2)
-                    print(f"✅ Resultado de la multiplicación: {resultado}")
+                    print(f" Resultado de la multiplicación: {resultado}")
 
                 elif operacion == "4":
                     resultado = dividir_polinomios(polinomio1, polinomio2)
-                    print(f"✅ Resultado de la división: {resultado}")
+                    print(f" Resultado de la división: {resultado}")
 
             elif operacion == "5":
                 print("\n Introduce el polinomio a evaluar:")
                 polinomio = ingresar_polinomio()
                 x = float(input(" Introduce el valor de x: "))
                 resultado = evaluar_polinomio(polinomio, x)
-                print(f"✅ Resultado de la evaluación: {resultado}")
+                print(f" Resultado de la evaluación: {resultado}")
 
             else:
-                print("❌ Opción no válida.")
+                print(" Opción no válida. Inténtelo de nuevo.")
 
         elif opcion == "2":
             print(" Funcionalidad de lectura de ficheros pendiente de implementar.")
@@ -113,7 +113,7 @@ def main():
             break
 
         else:
-            print("❌ Opción no válida. Inténtalo de nuevo.")
+            print(" Opción no válida. Inténtelo de nuevo.")
 
 
 if __name__ == "__main__":
