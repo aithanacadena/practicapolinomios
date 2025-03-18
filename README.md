@@ -60,7 +60,12 @@ Si la opción elegida es la 5, que correspondría a la opción de evaluación,
 se pedirá introducir un polinomio y un valor de x que sera el que se evaluará
 en el polinomio introducido. 
 
+Para introducir los polinomios aparecerá un ejemplo del formato en que se deben introducir.
 
-Al seleccinar la opción 2
+Al seleccinar la opción 2: 
+
+Se pide que ingreses el nombre del  fichero donde esten incluidos tus polinomios , por 
+ejemplo polinomios.txt. La calculadora leerá tanto los polinomios que estén en el fichero como 
+
 
 
