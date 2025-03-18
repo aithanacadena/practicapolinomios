@@ -3,7 +3,7 @@
 
 ### **Descripción:**
 
-Este proyecto es una calculadora de polinomios en Python que permite
+Este proyecto es una calculadora de polinomios hecha en Python que permite
 realizar diversas operaciones matemáticas con polinomios. 
 
 ### **Funciones de la calculadora:**
@@ -30,8 +30,10 @@ Este proyecto no necesita librerias externas, solo necesitas Python instalado en
 
 ### **Cómo instalarlo:**
 
-Clonar el repositório
-git clone  https://github.com/aithanacadena/practicapolinomios
+Clonar el repositório:
+
+git clone 
+https://github.com/aithanacadena/practicapolinomios
 
 ### **Uso de la calculadora:** 
 
@@ -71,6 +73,26 @@ los valores de "x" para la evaluación.
 Tras esto, aparecerá el menú de operaciones, donde seleccionaras la opción con la operación deseada para hacer
 con tus polinomios ingresados en el fichero. 
 
+#### Al seleccionar la opción 3: 
+
+La calculadora se apagará.
+
+#### Formato del resultado obtenido por la calculadora: 
+
+La calculadora esta configurada para hacer las operaciones en tipo diccionario, es decir con una estructura
+de {clave:valor}, siendo la clave el grado de cada elemento del polinomio y el valor el número que le corresponde. 
+Es decir, si el resultado que nos da la calculadora es: {3: 3, 1: 5, 0: -6} correspondería al polinomio
+3x^3 + 5x - 6.
+
+**¡IMPORTANTE!** 
+La calculadora no tiene porque devolver el polinomio ordenado de mayor grado a menor grado, es decir, es 
+posible que la calculadora devuelva un resultado como {2: 6, 4: 1, 0: 9, 1: 1} para un polinomio con valor de
+6x^2 + x^4 + 9 + x
+
+### Autores:
+
+Pablo Blanco-Traba Villar
+Aithana Cadena Ospitia 
 
 
 
