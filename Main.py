@@ -34,7 +34,9 @@ def main():
             if operacion in ["1", "2", "3", "4"]:
                 print("\n Introduce los dos polinomios para operar:")
                 polinomio1 = ingresar_polinomio()
+                print(f"\n Polinomio 1 guardado correctamente {polinomio1}")
                 polinomio2 = ingresar_polinomio()
+                print(f"\n Polinomio 2 guardado correctamente {polinomio2}")
 
                 if operacion == "1":
                     resultado = suma_polinomios(polinomio1, polinomio2)
