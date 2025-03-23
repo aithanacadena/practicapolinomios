@@ -4,7 +4,7 @@ def dicc_polinomio(polinomio_str):
 
     terminos = []
     temp = ""
-    for char in polinomio_str:
+    for char in polinomio_str: #Separar los terminos
         if char in "+-" and temp:
             terminos.append(temp)
             temp = char
@@ -12,7 +12,7 @@ def dicc_polinomio(polinomio_str):
             temp += char
     terminos.append(temp)
 
-    for termino in terminos:
+    for termino in terminos: #Manejo de excepciones en los terminos
         if "x" in termino:
             coeficiente, _, grado = termino.partition("x^")
 
@@ -36,6 +36,6 @@ def dicc_polinomio(polinomio_str):
             coeficiente = int(termino)
             grado = 0
 
-        polinomio[grado] = polinomio.get(grado, 0) + coeficiente
+        polinomio[grado] = polinomio.get(grado, 0) + coeficiente #Si hay dos terminos con el mismo grado los junta
 
     return polinomio

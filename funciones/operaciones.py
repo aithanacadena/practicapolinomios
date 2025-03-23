@@ -1,10 +1,10 @@
 # SUMA
 def suma_polinomios(p1, p2):
 
-    resultado = p1.copy()
+    resultado = p1.copy() # Para no sobreescribir en p1
 
-    for grado, coef in p2.items():
-        resultado[grado] = resultado.get(grado, 0) + coef
+    for grado, coef in p2.items(): # Lista de parejas (grado, coef)
+        resultado[grado] = resultado.get(grado, 0) + coef # Suma los coeficientes del mismo grado
 
     return resultado
 
@@ -48,7 +48,7 @@ def dividir_polinomios(dividendo, divisor):
 
     # Si el grado del dividendo es menor que el del divisor, la división no es posible
     if grado_dividendo < grado_divisor:
-        return ({}, dividendo)  # El cociente es 0 y el residuo es el dividendo
+        return ({}, dividendo)  # El cociente es 0 y el resto es el dividendo
 
     cociente = {}
 
@@ -69,7 +69,7 @@ def dividir_polinomios(dividendo, divisor):
 
         # Crear el polinomio a restar
         # Construye un nuevo polinomio que será restado del "resto" en la división de polinomios
-        # Multiplicando el el divisor por el término recién encontrado
+        # Multiplicando el divisor por el término recién encontrado
         polinomio_a_restar = {
             grado + grado_cociente: coef * coef_cociente
             for grado, coef in divisor.items()
