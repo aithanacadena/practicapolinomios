@@ -10,7 +10,7 @@ def leer_ficheros(nombre_archivo):
 
             for linea in lineas:
                 linea = linea.strip() #Elimina espacios en blanco
-                if linea.startswith("x ="):  # Si la línea empieza con el valor de x
+                if linea.startswith(("x =", "x=", "x = ")):  # Si la línea empieza con el valor de x
                     valor_x = float(linea.split("=")[1])  # Extrae el número de x
                 else:
                     polinomio = dicc_polinomio(linea)  # Convertirlo a diccionario
