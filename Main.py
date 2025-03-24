@@ -5,6 +5,7 @@ from funciones.operaciones import dividir_polinomios #Importamos la función de 
 from funciones.operaciones import evaluar_polinomio #Importamos la función de evaluación desde operaciones
 from funciones.lectura_ficheros import leer_ficheros #Importamos la función de lectura de ficheros
 from funciones.diccionarios import dicc_polinomio #Importamos la función de diccionarios
+from funciones.lectura_ficheros import guardar_resultado_en_fichero
 
 def mostrar_menu():
     print("\n CALCULADORA DE POLINOMIOS")
@@ -64,6 +65,10 @@ def main():
             else:
                 print(" Opción no válida. Inténtelo de nuevo.")
 
+        # Preguntar si quiere guardar el resultado
+        if input("¿Quieres guardar el resultado en un archivo? (s/n): ").strip().lower() == "s":
+            guardar_resultado_en_fichero(resultado)
+
 
         elif opcion == "2":
 
@@ -114,6 +119,10 @@ def main():
                     elif operacion == "5":
                         resultado = evaluar_polinomio(polinomios[0], valor_x)
                         print(f" Resultado de la evaluación: {resultado}")
+
+                    # Preguntar si quiere guardar el resultado
+                    if input("¿Quieres guardar el resultado en un archivo? (s/n): ").strip().lower() == "s":
+                        guardar_resultado_en_fichero(resultado)
 
         elif opcion == "3":
             print("Apagando calculadora...")

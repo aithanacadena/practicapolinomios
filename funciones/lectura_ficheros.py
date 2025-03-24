@@ -22,3 +22,15 @@ def leer_ficheros(nombre_archivo):
         print(f" Error al leer el archivo: {e}")
 
     return polinomios, valor_x  # Devuelve los polinomios y el valor de x si existe
+
+
+def guardar_resultado_en_fichero(resultado):
+    nombre_fichero = input("Introduce el nombre del fichero donde quieres guardar el resultado: ")
+
+    try:
+        with open(nombre_fichero, "a") as f:  # "a" para añadir sin borrar contenido
+            f.write(f"\nResultado: {resultado}\n")
+        print(f"Resultado guardado en '{nombre_fichero}'")
+
+    except Exception as e:
+        print(f"Error al guardar el resultado: {e}")
