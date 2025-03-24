@@ -84,6 +84,9 @@ de {clave:valor}, siendo la clave el grado de cada elemento del polinomio y el v
 Es decir, si el resultado que nos da la calculadora es: {3: 3, 1: 5, 0: -6} correspondería al polinomio
 3x^3 + 5x - 6.
 
+Además la calculadora te permite guardar todos los resultados de todas las operaciones que hagas en el fichero o archivo que quieras.
+Te preguntará una vez ya tengas el resultado si quieres guardarlo o no. (s/n) siendo s si querer guardarlo y n no.
+
 **¡IMPORTANTE!** 
 La calculadora no tiene porque devolver el polinomio ordenado de mayor grado a menor grado, es decir, es 
 posible que la calculadora devuelva un resultado como {2: 6, 4: 1, 0: 9, 1: 1} para un polinomio con valor de
