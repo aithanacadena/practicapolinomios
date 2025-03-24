@@ -62,13 +62,12 @@ def main():
                 resultado = evaluar_polinomio(polinomio, x)
                 print(f" Resultado de la evaluación: {resultado}")
 
+            # Preguntar si quiere guardar el resultado
+            if input("¿Quieres guardar el resultado en un archivo? (s/n): ").strip().lower() == "s":
+                guardar_resultado_en_fichero(resultado)
+
             else:
                 print(" Opción no válida. Inténtelo de nuevo.")
-
-        # Preguntar si quiere guardar el resultado
-        if input("¿Quieres guardar el resultado en un archivo? (s/n): ").strip().lower() == "s":
-            guardar_resultado_en_fichero(resultado)
-
 
         elif opcion == "2":
 
